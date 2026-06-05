@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Simpli - Explain Like I'm 10</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header>
+    <h1>🧠 Explain Like I'm 10</h1>
+    <p>Enter any complex topic — get a super-simple explanation with analogies, examples & ASCII diagrams</p>
+  </header>
+
+  <!-- API Key bar -->
+  <div id="api-bar">
+    <input id="api-key-input" type="password" placeholder="🔑 Paste your Gemini API key here (ai.google.dev)" />
+    <button id="save-key-btn">Save Key</button>
+  </div>
+  <p id="key-status" class="key-saved" style="display:none; margin-bottom:10px;">✅ Key saved!</p>
+  <p style="font-size:0.8rem; text-align:center; margin-bottom:12px; opacity:0.7;">
+    Don't have a key?
+    <a href="https://aistudio.google.com/app/apikey" target="_blank" rel="noopener noreferrer" id="api-key-link"
+      class="api-key-link">
+      Get your free Gemini API key here →
+    </a>
+    <!-- Quick topic chips -->
+  <div id="chips">
+    <span class="chip" onclick="fillTopic('Big O Notation')">Big O Notation</span>
+    <span class="chip" onclick="fillTopic('Linked List')">Linked List</span>
+    <span class="chip" onclick="fillTopic('REST API')">REST API</span>
+    <span class="chip" onclick="fillTopic('HTTP vs HTTPS')">HTTP vs HTTPS</span>
+    <span class="chip" onclick="fillTopic('SQL Joins')">SQL Joins</span>
+    <span class="chip" onclick="fillTopic('OOP Concepts')">OOP Concepts</span>
+    <span class="chip" onclick="fillTopic('DNS Explained')">DNS</span>
+    <span class="chip" onclick="fillTopic('Deadlock in OS')">Deadlock</span>
+    <span class="chip" onclick="fillTopic('Virtual Memory')">Virtual Memory</span>
+    <span class="chip" onclick="fillTopic('Cache Memory')">Cache Memory</span>
+    <span class="chip" onclick="fillTopic('Indexing in DBMS')">DB Indexing</span>
+    <span class="chip" onclick="fillTopic('Sorting Algorithms')">Sorting Algorithms</span>
+    <span class="chip" onclick="fillTopic('Process vs Thread')">Process vs Thread</span>
+    <span class="chip" onclick="fillTopic('Encryption and Decryption')">Encryption</span>
+    <span class="chip" onclick="fillTopic('Callbacks and Promises in JavaScript')">Callbacks & Promises</span>
+    <span class="chip" onclick="fillTopic('MVC Architecture')">MVC Pattern</span>
+    <span class="chip" onclick="fillTopic('Git and Version Control')">Git Basics</span>
+    <span class="chip" onclick="fillTopic('Trees in Data Structure')">Trees (DSA)</span>
+    <span class="chip" onclick="fillTopic('Graph Data Structure')">Graphs (DSA)</span>
+    <span class="chip" onclick="fillTopic('ACID Properties in DBMS')">ACID Properties</span>
+  </div>
+
+  <div id="chat-container">
+    <div id="messages">
+      <div class="msg bot">
+        <div class="avatar">✨</div>
+        <div class="bubble">
+          👋 Hey <strong>there</strong>! I'm Simpli, your<em>Ai tutor</em>.<br><br>
+          Give me any topic — like <code>Recursion</code> or <code>Normalization</code> - and I'll
+          explain it like you're 10 years old, using <em>real-life analogies, examples, and simple ASCII
+            diagrams</em>.<br><br>
+          Pick your age/level below and ask away! 🚀
+        </div>
+      </div>
+    </div>
+
+    <div id="input-row">
+      <select id="age-select">
+        <option value="10">🧒 Age 10 (Super Simple)</option>
+        <option value="15">👦 Age 15 (Teen Level)</option>
+        <option value="college" selected>🎓 College Student</option>
+        <option value="viva">📋 Viva Ready</option>
+      </select>
+      <input id="user-input" type="text" placeholder="Enter any topic, e.g. 'Linked List'..." />
+      <button id="send-btn">➤</button>
+    </div>
+  </div>
+  <footer style="text-align:center; padding:16px; font-size:0.8rem; opacity:0.6; margin-top:12px;">
+    Made with ❤️ by <strong>Ratandeep</strong>
+  </footer>
+  <script src="script.js"></script>
+
+</body>
+
+</html>
